@@ -12,6 +12,8 @@ do {
         $d2pid = $matches["d2pid"]
         $eventHandle = $matches["eventHandle"]
         handle -c $eventHandle -p $d2pid -y -nobanner
+
+        Get-Process D2R | Select-Object Path | Write-Host
     }
     
     Start-Sleep 10
