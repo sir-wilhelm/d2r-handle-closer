@@ -11,7 +11,7 @@ do {
     if ($handle -match "pid:\s+(?<d2pid>\d+)\s+type:\s+Event\s+(?<eventHandle>\w+):") {
         $d2pid = $matches["d2pid"]
         $eventHandle = $matches["eventHandle"]
-        handle -c $eventHandle -p $d2pid -y -nobanner
+        .\handle.exe -c $eventHandle -p $d2pid -y -nobanner
 
         Get-Process D2R | Select-Object Path | Sort-Object -Property Path | Write-Host
     }
