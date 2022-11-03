@@ -7,7 +7,7 @@ if (!(Test-Path handle.exe)) {
 
 do {
 
-    $handle = .\handle.exe -a -p d2 "Check For Other Instances" -nobanner | Out-String
+    $handle = .\handle.exe -a -p d2r "Check For Other Instances" -nobanner | Out-String
     if ($handle -match "pid:\s+(?<d2pid>\d+)\s+type:\s+Event\s+(?<eventHandle>\w+):") {
         $d2pid = $matches["d2pid"]
         $eventHandle = $matches["eventHandle"]
