@@ -29,10 +29,13 @@ then passes them into the close handle call.
 ## How to run
 
 Download [d2r-handle-closer.ps1][d2r-handle-closer.ps1]/[Handle.exe][handle] and put them in the same folder.
-Run an administrative PowerShell prompt and navigate to the folder where the files are.
+Run an administrative PowerShell prompt and navigate to the folder where the files are
+(ex: `cd D:\src\d2r-handle-closer`).
 
 You might have to run `Unblock-File .\d2r-handle-closer.ps1` before your PC will allow you to run it
-(only needs to be done once).
+(only needs to be done once). You will also have to run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`
+if this is the first time you are running PowerShell Scritps. You can read more about Executionpolicy from Microsoft
+[here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 Then just run the script Ex:
 ```
