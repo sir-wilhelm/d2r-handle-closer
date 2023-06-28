@@ -1,4 +1,5 @@
 #Requires -RunAsAdministrator
+#Requires -Version 7.0
 
 if (!(Test-Path handle.exe)) {
     "handle.exe not found, make sure it is in the same folder as the script."
@@ -13,7 +14,8 @@ do {
         $eventHandle = $matches["eventHandle"]
         .\handle.exe -c $eventHandle -p $d2pid -y -nobanner
 
-        Get-Process D2R | Select-Object Path | Sort-Object -Property Path | Out-Host
+        $exeIndex = (Get-Process -Id $d2pid).commandLine.IndexOf("exe")
+        Get-Process D2R | Sort-Object -Property CommandLine | ForEach-Object { $_.CommandLine.Substring(0, ($_.CommandLine.Length -gt $exeIndex + 13) ? $exeIndex + 16 : $_.CommandLine.Length) }
     }
 
     Start-Sleep 10
