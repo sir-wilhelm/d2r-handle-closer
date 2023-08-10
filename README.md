@@ -59,6 +59,14 @@ Handle closed.
 
 To stop press `Ctrl + c` or close PowerShell.
 
+## Core isolation popup
+
+If you get a security warning pops that says to:
+> A driver cannot load on this device
+> Driver: procexp152.sys
+
+Make sure you have the latest version of handle.exe
+
 # License
 
 [MIT License](/LICENSE)
