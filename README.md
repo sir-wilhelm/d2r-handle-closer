@@ -28,8 +28,8 @@ then passes them into the close handle call.
 
 ## How to run
 
-Download [d2r-handle-closer.ps1][d2r-handle-closer.ps1]/[Handle.exe][handle] and put them in the same folder.
-Run an administrative PowerShell prompt and navigate to the folder where the files are
+Download [d2r-handle-closer.ps1][d2r-handle-closer.ps1]/[Handle.exe][handle]/[pwsh][pwsh] and put them in the same folder.
+Run an administrative PowerShell 7 prompt and navigate to the folder where the files are
 (ex: `cd D:\src\d2r-handle-closer`).
 
 You might have to run `Unblock-File .\d2r-handle-closer.ps1` before your PC will allow you to run it
@@ -73,3 +73,4 @@ Make sure you have the latest version of handle.exe
 
 [handle]: https://learn.microsoft.com/en-us/sysinternals/downloads/handle
 [d2r-handle-closer.ps1]: /d2r-handle-closer.ps1?raw=1
+[pwsh]: https://github.com/PowerShell/PowerShell/releases
