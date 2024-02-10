@@ -1,5 +1,5 @@
 #Requires -RunAsAdministrator
-#Requires -Version 7.0
+#Requires -PSEdition Core
 
 if (!(Test-Path handle.exe)) {
     "handle.exe not found, make sure it is in the same folder as the script."
