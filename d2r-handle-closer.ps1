@@ -1,6 +1,10 @@
 #Requires -RunAsAdministrator
 #Requires -PSEdition Core
 
+param(
+    [switch]$NoLoop
+)
+
 if (!($env:Path -like "*$PSScriptRoot*")) {
     $env:Path += ";$PSScriptRoot"
 }
@@ -20,6 +24,11 @@ do {
 
         $exeIndex = (Get-Process -Id $d2pid).commandLine.IndexOf("exe")
         Get-Process D2R | Sort-Object -Property CommandLine | ForEach-Object { $_.CommandLine.Substring(0, ($_.CommandLine.Length -gt $exeIndex + 13) ? $exeIndex + 16 : $_.CommandLine.Length) }
+        Get-Date
+    }
+
+    if ($NoLoop) {
+        break
     }
 
     Start-Sleep 10
