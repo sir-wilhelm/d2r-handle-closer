@@ -23,7 +23,7 @@ do {
         handle.exe -c $eventHandle -p $d2pid -y -nobanner
 
         $exeIndex = (Get-Process -Id $d2pid).commandLine.IndexOf("exe")
-        Get-Process D2R | Sort-Object -Property CommandLine | ForEach-Object { $_.CommandLine.Substring(0, ($_.CommandLine.Length -gt $exeIndex + 13) ? $exeIndex + 16 : $_.CommandLine.Length) }
+        Get-Process D2R | Sort-Object -Property CommandLine | ForEach-Object { ($_.CommandLine.Substring(0, ($_.CommandLine.Length -gt $exeIndex + 13) ? $exeIndex + 16 : $_.CommandLine.Length)) + "`t$($_.ProductVersion)" }
         Get-Date
     }
 
