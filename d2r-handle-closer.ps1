@@ -28,6 +28,7 @@ do {
     }
 
     if ($NoLoop) {
+        Pause
         break
     }
 
